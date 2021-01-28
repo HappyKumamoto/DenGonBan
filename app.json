@@ -1,0 +1,8 @@
+{
+  "name": "DenGonBan",
+  "description": "なんでも伝言板",
+  "repository": "https://github.com/HappyKumamoto/DenGonBan",
+  "logo": "",
+  "keywords": ["node"],
+  "image": "heroku/nodejs"
+}
