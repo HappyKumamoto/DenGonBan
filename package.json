@@ -1,0 +1,16 @@
+{
+  "name": "DenGonBan",
+  "version": "1.0.0",
+  "description": "なんでも伝言板",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": "git@github.com:HappyKumamoto/DenGonBan.git",
+  "author": "HappyKumamoto <zen.word+hub@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "http-auth": "3.2.3",
+    "pug": "2.0.4"
+  }
+}
