@@ -16,19 +16,19 @@ html(lang="ja")
      
   body
     - function Keikajikan(createdAt) {
-    -   const milliseconds = new Date() - new Date(createdAt);
-    -   const seconds = Math.floor(milliseconds / 1000);
-    -   const minutes = Math.floor(milliseconds / 1000 / 60);
-    -   const hours = Math.floor(milliseconds / (1000 * 60) / 60);
-    -   const days = Math.floor((milliseconds / (1000 * 60 * 60)) / 24);
-    -   const months = Math.floor((millisecons / (1000 * 60 * 60 * 24)) /30);
-    -   const years = Math.floor((milliseconds / (1000 * 60 * 60)) / 24 / 365);
+    -   const milliseconds = new Date() - new Date(createdAt)
+    -   const seconds = Math.floor(milliseconds / 1000)
+    -   const minutes = Math.floor(milliseconds / 1000 / 60)
+    -   const hours = Math.floor(milliseconds / (1000 * 60) / 60)
+    -   const days = Math.floor((milliseconds / (1000 * 60 * 60)) / 24)
+    -   const months = Math.floor((millisecons / (1000 * 60 * 60 * 24)) /30)
+    -   const years = Math.floor((milliseconds / (1000 * 60 * 60)) / 24 / 365)
     -   if (years > 0)  return `${years}年前`
     -   else if (months > 0)  return `${months}か月前`
     -   else if (days > 0)  return `${days}日前` 
     -   else if (hours > 0)  return `${hours}時間前` 
     -   else if (minutes > 0)  return `${minutes}分前` 
-    -   else return `${seconds}秒前`;
+    -   else return `${seconds}秒前`
     - }
 
     a(href="/logout") ログアウト
@@ -40,16 +40,29 @@ html(lang="ja")
         textarea(name="content" cols=20 rows=20)
        div
         button(type="submit") 押
-    h4(style="text-align:right") 伝言は七日後消滅します↑まだできてません
+    //-h4(style="text-align:right") 伝言は七日後消滅します
     hr
     hr
     each post in posts
-      p(style="font-size:130%") #{post.content}
-      -const PastFromPostedTime = Keikajikan(post.createdAt);
-      p(style="font-size:70%") #{post.id} #{PastFromPostedTime}
+      - const isPostedByAdmin = (post.postedBy === 'admin')
+       if isPostedByAdmin
+        h3(style="font-size:70%") ★
+       else
+        //-h3(style="font-size:70%") ID:#{post.trackingCookie}
+       p(style="font-size:130%") #{post.content}
+      - const PastFromPostedTime = Keikajikan(post.createdAt)
+       p(style="font-size:70%") #{post.id} #{PastFromPostedTime} #{post.postedBy}
+      - const isAdmin = (user === 'admin')
+       if isAdmin
+        //-p 投稿者: #{post.postedBy}
+      - const isDeletable = (user === post.postedBy || isAdmin)
+       if isDeletable
+        form(method="post" action="/posts?delete=1")
+          input(type="hidden" name="id" value=post.id)
+          button(type="submit") 消
       hr  
     
-    //--var isDeletable = (PastFromPostedTime >= (1000*60*60*24*7));
+    //--const isDeletable = (PastFromPostedTime >= (1000*60*60*24*7))
     
 
     
