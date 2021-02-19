@@ -2,8 +2,9 @@
 - 昔はどこの駅にでもあった、黒板の伝言板をイメージしました。
 - 色数と表示を最小限に抑えています。 「投稿」 は 『押』、 「削除」 は 『消』 です。
 - 今後の課題として 改行の機能、 半角スペースが+になる点、テストがあります。
-- guest1 と guest2 のパスワードは「Herokuへの安全な公開」のテキストどおりです。
 
 
 ![スクリーンショット 2021-01-30 20 02 12](https://user-images.githubusercontent.com/67646107/106355346-9d1b5800-633a-11eb-9fbb-4e5aa47697d4.png)
-<!--- https://lit-earth-58334.herokuapp.com/posts -->
+
+-  https://lit-earth-58334.herokuapp.com/posts 
+-  guest1:Rucasp6y 是非お立ち寄り、お試しください(._.).
