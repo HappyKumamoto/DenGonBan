@@ -2,9 +2,18 @@ doctype html
 html(lang="ja")
   head
     meta(charset="UTF-8")
-    title 秘密の匿名掲示板
+    title なんでも伝言板
+    style.
+      *{
+          text-align: center;
+          writing-mode: vertical-rl;
+          text-orientation: upright;
+          background-color: #008000;
+          color: #DDDDDD;
+          font-family: monospace,serif;
+          }
   body
-    h1 秘密の匿名掲示板
+    h1 なんでも 伝 言 板
     a(href="/logout") ログアウト
     h2 新規投稿
     form(method="post" action="/posts")
