@@ -10,7 +10,11 @@
   "author": "HappyKumamoto <zen.word+hub@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "cookies": "0.5.1",
     "http-auth": "3.2.3",
-    "pug": "2.0.4"
+    "pg": "7.17.1",
+    "pg-hstore": "2.3.3",
+    "pug": "2.0.4",
+    "sequelize": "5.21.5"
   }
 }
