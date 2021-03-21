@@ -6,4 +6,4 @@ https://lit-earth-58334.herokuapp.com/posts
 - 半角スペースと+の問題は克服しました。今後の課題は改行です。
 ![image](https://user-images.githubusercontent.com/67646107/111876359-aee7b600-89e1-11eb-993b-eec075e17efa.png)<br>
 2021.3.7からアプリケーションエラーでつながらなくなっておりましたが、<br>
-3.21より再開いたしました。
+おかげさまで、3.21より再開いたしました。
